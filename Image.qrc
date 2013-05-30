@@ -1,0 +1,23 @@
+<RCC>
+    <qresource prefix="/image">
+        <file>bobcat.jpg</file>
+        <file>export.png</file>
+        <file>gopher.jpg</file>
+        <file>import.png</file>
+        <file>mail.png</file>
+        <file>NIAID_Logo.jpg</file>
+        <file>Warning_icon.png</file>
+        <file>15417203-exit-icon.jpg</file>
+        <file>bigfolder.png</file>
+        <file>copy_icon.jpg</file>
+        <file>Cut-icon.png</file>
+        <file>exit.png</file>
+        <file>Files-New-File-icon.png</file>
+        <file>Information_icon.svg</file>
+        <file>Open-icon.png</file>
+        <file>paste_icon.jpg</file>
+        <file>Redo.png</file>
+        <file>Undo-icon.png</file>
+        <file>information.png</file>
+    </qresource>
+</RCC>
