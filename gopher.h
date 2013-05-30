@@ -8,14 +8,10 @@
 #include <QJsonObject>
 #include <QJsonArray>
 #include <QList>
-#include <QtGui>
-
-#include <QMainWindow>
 
 namespace Ui
 {
 class Gopher;
-class save;
 }
 
 class Gopher : public QMainWindow
@@ -51,6 +47,10 @@ private slots:
 
 private:
     Ui::Gopher* ui;
+
+    QJsonObject* sessionObject;
+    QJsonObject list;
+
     QJsonDocument* file;
 };
 
