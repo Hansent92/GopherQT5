@@ -458,8 +458,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>667</width>
-             <height>534</height>
+             <width>713</width>
+             <height>547</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -504,10 +504,10 @@
                <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:600; font-style:italic;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:12pt;&quot;&gt;Welcome To Gopher&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:12pt;&quot;&gt;Good Luck!!!!!!!&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:12pt;&quot;&gt;For Help Call 1-800-Can't-Help!&lt;/span&gt;&lt;/p&gt;
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:600; font-style:italic;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Welcome To Gopher&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Good Luck!!!!!!!&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;For Help Call 1-800-Can't-Help!&lt;/span&gt;&lt;/p&gt;
 &lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;img src=&quot;C:\Users\hansentd\Desktop\Image\gopher.jpg&quot; /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
               </property>
               <property name="overwriteMode">
@@ -542,8 +542,8 @@ p, li { white-space: pre-wrap; }
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>667</width>
-             <height>536</height>
+             <width>713</width>
+             <height>552</height>
             </rect>
            </property>
            <attribute name="label">
@@ -1077,7 +1077,7 @@ p, li { white-space: pre-wrap; }
               <x>30</x>
               <y>10</y>
               <width>371</width>
-              <height>194</height>
+              <height>152</height>
              </rect>
             </property>
             <layout class="QGridLayout" name="gridLayout_21">
@@ -1621,7 +1621,7 @@ p, li { white-space: pre-wrap; }
              <rect>
               <x>20</x>
               <y>10</y>
-              <width>404</width>
+              <width>371</width>
               <height>261</height>
              </rect>
             </property>
@@ -1846,8 +1846,8 @@ p, li { white-space: pre-wrap; }
              <rect>
               <x>20</x>
               <y>10</y>
-              <width>404</width>
-              <height>321</height>
+              <width>311</width>
+              <height>281</height>
              </rect>
             </property>
             <layout class="QGridLayout" name="gridLayout_28">
@@ -2093,7 +2093,7 @@ p, li { white-space: pre-wrap; }
               <x>10</x>
               <y>10</y>
               <width>240</width>
-              <height>62</height>
+              <height>48</height>
              </rect>
             </property>
             <layout class="QGridLayout" name="gridLayout_30">
@@ -2272,8 +2272,8 @@ p, li { white-space: pre-wrap; }
              <rect>
               <x>10</x>
               <y>10</y>
-              <width>325</width>
-              <height>415</height>
+              <width>313</width>
+              <height>328</height>
              </rect>
             </property>
             <layout class="QGridLayout" name="gridLayout_32">
@@ -2573,7 +2573,7 @@ p, li { white-space: pre-wrap; }
      <x>0</x>
      <y>0</y>
      <width>1099</width>
-     <height>25</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">

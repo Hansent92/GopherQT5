@@ -329,9 +329,9 @@ void Gopher::on_Done_clicked()
         list.insert("Data",sessionObject);
 
         QJsonObject sessionObject3;//TEM 2D
-        sessionObject3.insert("Camara", ui->Camera_TEM2D_2->currentText());
+        sessionObject3.insert("Camera", ui->Camera_TEM2D_2->currentText());
         sessionObject3.insert("Energy Filter Slit Size", ui->EnergyFilterSlitSize_Text_TEM2D_2->displayText());
-        sessionobject3.insert("Acquisition Software",ui->AcquisitionSoftware_TEM2D_2->currentText());
+        sessionObject3.insert("Acquisition Software",ui->AcquisitionSoftware_TEM2D_2->currentText());
         sessionObject3.insert("Voltage",ui->Voltage_Text_TEM2D_2->displayText());
         sessionObject3.insert("Cs Value",ui->CsValue_Text_TEM2D_2->displayText());
 
@@ -348,7 +348,7 @@ void Gopher::on_Done_clicked()
         {
             file.write(doc.toJson());
             file.close();
-        }ata
+        }
 
         QMessageBox::information(0, QString("Gopher"), QString("You Were Successful!")
                                  , QMessageBox::Ok);
@@ -775,22 +775,22 @@ void Gopher::on_actionImport_triggered()
     file.close();
 
     QJsonDocument input = QJsonDocument::fromJson(inFile.toUtf8());
-    sessionObject = input.object();
+    list = input.object();
 
-    QString csval = QJsonValue(sessionObject.value("Cs Value")).toString();
-    ui->csValue_Text->setText(csval);
+    QString csval = QJsonValue(list.value("Cs Value")).toString();
+    ui->CsValue_Text_TEM2D_2->setText(csval);
 
-    QString voltageVal = QJsonValue(sessionObject.value("Voltage")).toString();
-    ui->voltage_Text->setText(voltageVal);
+    QString voltageVal = QJsonValue(list.value("Voltage")).toString();
+    ui->Voltage_Text_TEM2D_2->setText(voltageVal);
 
-    QString efssVal = QJsonValue(sessionObject.value("Energy Filter Slit Size")).toString();
-    ui->energyFilterSlitSize_Text->setText(efssVal);
+    QString efssVal = QJsonValue(list.value("Energy Filter Slit Size")).toString();
+    ui->EnergyFilterSlitSize_Text_TEM2D_2->setText(efssVal);
 
-    QString camVal = QJsonValue(sessionObject.value("Camera")).toString();
-    ui->camera->setCurrentText(camVal);
+    QString camVal = QJsonValue(list.value("Camera")).toString();
+    ui->Camera_TEM2D_2->setCurrentText(camVal);
 
-    QString acqSofVal = QJsonValue(sessionObject.value("Acquisition Software")).toString();
-    ui->acquistionSoftware->setCurrentText(acqSofVal);
+    QString acqSofVal = QJsonValue(list.value("Acquisition Software")).toString();
+    ui->AcquisitionSoftware_TEM2D_2->setCurrentText(acqSofVal);
 }
 
 void Gopher::on_actionExport_triggered()
