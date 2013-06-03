@@ -24,6 +24,13 @@
    <layout class="QFormLayout" name="formLayout">
     <item row="0" column="0">
      <layout class="QGridLayout" name="gridLayout">
+      <item row="4" column="0" colspan="2">
+       <widget class="QLabel" name="DescriptiveTitle">
+        <property name="text">
+         <string>Descriptive Title</string>
+        </property>
+       </widget>
+      </item>
       <item row="0" column="0" colspan="3">
        <widget class="QComboBox" name="DataTakenBy">
         <property name="palette">
@@ -197,13 +204,6 @@
         </property>
         <property name="placeholderText">
          <string>Subset ID</string>
-        </property>
-       </widget>
-      </item>
-      <item row="4" column="0" colspan="2">
-       <widget class="QLabel" name="DescriptiveTitle">
-        <property name="text">
-         <string>Descriptive Title</string>
         </property>
        </widget>
       </item>
@@ -470,7 +470,7 @@
             <string>Welcome to Gopher</string>
            </attribute>
            <layout class="QGridLayout" name="gridLayout_2">
-            <item row="0" column="0">
+            <item row="1" column="0">
              <widget class="QTextEdit" name="Welcome">
               <property name="enabled">
                <bool>true</bool>
@@ -517,6 +517,9 @@ p, li { white-space: pre-wrap; }
                <bool>true</bool>
               </property>
              </widget>
+            </item>
+            <item row="0" column="0">
+             <layout class="QFormLayout" name="formLayout_2"/>
             </item>
            </layout>
           </widget>
@@ -590,13 +593,6 @@ p, li { white-space: pre-wrap; }
               <widget class="QLabel" name="EnergyFilterSlitSize_TEM2D_2">
                <property name="text">
                 <string>Energy Filter Slit Size</string>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="1">
-              <widget class="QLineEdit" name="EnergyFilterSlitSize_Text_TEM2D_2">
-               <property name="inputMask">
-                <string>25</string>
                </property>
               </widget>
              </item>
@@ -719,6 +715,16 @@ p, li { white-space: pre-wrap; }
                </property>
               </widget>
              </item>
+             <item row="1" column="1">
+              <widget class="QLineEdit" name="EnergyFilterSlitSize_Text_TEM2D_2">
+               <property name="inputMask">
+                <string/>
+               </property>
+               <property name="text">
+                <string>25</string>
+               </property>
+              </widget>
+             </item>
             </layout>
            </widget>
           </widget>
@@ -744,8 +750,8 @@ p, li { white-space: pre-wrap; }
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>98</width>
-             <height>28</height>
+             <width>713</width>
+             <height>552</height>
             </rect>
            </property>
            <attribute name="label">
