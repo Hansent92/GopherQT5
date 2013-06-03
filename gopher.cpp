@@ -1338,10 +1338,7 @@ void Gopher::on_actionImport_triggered()
 
 void Gopher::on_actionExport_triggered()
 {
-    QString filename = QFileDialog::getSaveFileName(this, "Save file", "", ".json");
-    QFile f( filename );
-    f.open( QIODevice::WriteOnly );
-    f.close();
+    on_Done_clicked();
 }
 
 void Gopher::on_actionExit_triggered()
