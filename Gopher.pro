@@ -19,5 +19,4 @@ HEADERS  += gopher.h
 
 FORMS    += gopher.ui
 
-RESOURCES += \
-    Image.qrc
+RESOURCES +=
