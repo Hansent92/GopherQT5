@@ -13,7 +13,8 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        gopher.cpp
+        gopher.cpp \
+    instruments.cpp
 
 HEADERS  += gopher.h
 
