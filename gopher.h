@@ -28,7 +28,6 @@ private slots:
     void on_Done_clicked();
 
     void on_imageMode_currentIndexChanged(int index);
-
     void on_Instrument_currentIndexChanged(int index);
 
     void on_actionHedwig_triggered();
