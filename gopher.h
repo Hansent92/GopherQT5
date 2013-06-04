@@ -51,6 +51,8 @@ private:
     QJsonObject list;
 
     QJsonDocument* file;
+
+    void FillH7500ImageModes();
 };
 
 #endif // GOPHER_H

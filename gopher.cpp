@@ -36,6 +36,33 @@ void Gopher::on_Cancel_clicked()
     close();
 }
 
+void Gopher::FillH7500ImageModes() {
+
+    QVariant v(0);//disables
+    QVariant m(1 | 32);//enables
+
+    QModelIndex index1 = ui->imageMode->model()->index(1,0);//TEM 2D
+    ui->imageMode->model()->setData(index1, m, Qt::UserRole -1);
+    QModelIndex index2 = ui->imageMode->model()->index(2,0);//Tem Tomo
+    ui->imageMode->model()->setData(index2, v, Qt::UserRole -1);
+    QModelIndex index3 = ui->imageMode->model()->index(3,0);//Cryp-Tem-2D
+    ui->imageMode->model()->setData(index3, v, Qt::UserRole -1);
+    QModelIndex index4 = ui->imageMode->model()->index(4,0);//Cryo-Tem-Tomo
+    ui->imageMode->model()->setData(index4, v, Qt::UserRole -1);
+    QModelIndex index5 = ui->imageMode->model()->index(5,0);//Stem 2D
+    ui->imageMode->model()->setData(index5, v, Qt::UserRole -1);
+    QModelIndex index6 = ui->imageMode->model()->index(6,0);//Stem Tomo
+    ui->imageMode->model()->setData(index6, v, Qt::UserRole -1);
+    QModelIndex index7 = ui->imageMode->model()->index(7,0);//Sem 2D
+    ui->imageMode->model()->setData(index7, v, Qt::UserRole -1);
+    QModelIndex index8 = ui->imageMode->model()->index(8,0);//Cryo-Sem
+    ui->imageMode->model()->setData(index8, v, Qt::UserRole -1);
+    QModelIndex index9 = ui->imageMode->model()->index(9,0);//Confocal
+    ui->imageMode->model()->setData(index9, v, Qt::UserRole -1);
+
+}
+
+
 void Gopher::on_Instrument_currentIndexChanged(int index)
 {
     QVariant v(0);//disables
@@ -98,26 +125,7 @@ void Gopher::on_Instrument_currentIndexChanged(int index)
     case 1://H7500
     {
         //Image Mode
-        {
-            QModelIndex index1 = ui->imageMode->model()->index(1,0);//TEM 2D
-            ui->imageMode->model()->setData(index1, m, Qt::UserRole -1);
-            QModelIndex index2 = ui->imageMode->model()->index(2,0);//Tem Tomo
-            ui->imageMode->model()->setData(index2, v, Qt::UserRole -1);
-            QModelIndex index3 = ui->imageMode->model()->index(3,0);//Cryp-Tem-2D
-            ui->imageMode->model()->setData(index3, v, Qt::UserRole -1);
-            QModelIndex index4 = ui->imageMode->model()->index(4,0);//Cryo-Tem-Tomo
-            ui->imageMode->model()->setData(index4, v, Qt::UserRole -1);
-            QModelIndex index5 = ui->imageMode->model()->index(5,0);//Stem 2D
-            ui->imageMode->model()->setData(index5, v, Qt::UserRole -1);
-            QModelIndex index6 = ui->imageMode->model()->index(6,0);//Stem Tomo
-            ui->imageMode->model()->setData(index6, v, Qt::UserRole -1);
-            QModelIndex index7 = ui->imageMode->model()->index(7,0);//Sem 2D
-            ui->imageMode->model()->setData(index7, v, Qt::UserRole -1);
-            QModelIndex index8 = ui->imageMode->model()->index(8,0);//Cryo-Sem
-            ui->imageMode->model()->setData(index8, v, Qt::UserRole -1);
-            QModelIndex index9 = ui->imageMode->model()->index(9,0);//Confocal
-            ui->imageMode->model()->setData(index9, v, Qt::UserRole -1);
-        }
+        FillH7500ImageModes();
         //Camera
         {
             QModelIndex index1 = ui->Camera->model()->index(1,0);//Hamamatsu Xr-100
