@@ -121,6 +121,7 @@ private:
     void ImportCryoSEM();
     void ImportCryoSEMVitrobotSettings();
     void ImportConfocal();
+
 };
 
 #endif // GOPHER_H
