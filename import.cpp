@@ -30,9 +30,10 @@ void Gopher::ImportInfo()
     file.close();
 
     QJsonDocument input = QJsonDocument::fromJson(inFile.toUtf8());
-    list = input.object();
+    header = input.object();
 
-    QJsonObject info = QJsonValue(list.value("Info")).toObject();
+    QJsonObject sessionData = QJsonValue(header.value("Session Data")).toObject();
+    QJsonObject info = QJsonValue(sessionData.value("Session")).toObject();
 
     QString takenVal = QJsonValue(info.value("Data Taken By")).toString();
     ui->DataTakenBy->setCurrentText(takenVal);
@@ -73,9 +74,10 @@ void Gopher::ImportTEM2D()
     file.close();
 
     QJsonDocument input = QJsonDocument::fromJson(inFile.toUtf8());
-    list = input.object();
+    header = input.object();
 
-    QJsonObject tem2D = QJsonValue(list.value("TEM 2D")).toObject();
+    QJsonObject sessionData = QJsonValue(header.value("Session Data")).toObject();
+    QJsonObject tem2D = QJsonValue(sessionData.value("TEM 2D")).toObject();
 
     QString csval = QJsonValue(tem2D.value("Cs Value")).toString();
     ui->CsValue_Text_TEM2D_2->setText(csval);
@@ -104,9 +106,10 @@ void Gopher::ImportTEMTomo()
     file.close();
 
     QJsonDocument input = QJsonDocument::fromJson(inFile.toUtf8());
-    list = input.object();
+    header = input.object();
 
-    QJsonObject temTomo = QJsonValue(list.value("TEM Tomo")).toObject();
+    QJsonObject sessionData = QJsonValue(header.value("Session Data")).toObject();
+    QJsonObject temTomo = QJsonValue(sessionData.value("TEM Tomo")).toObject();
 
     QString astVal = QJsonValue(temTomo.value("Actual Specimen Thickness")).toString();
     ui->MaxSpecimenThickness_Text_TEMTomo_2->setText(astVal);
@@ -141,9 +144,10 @@ void Gopher::ImportCryoTEM()
     file.close();
 
     QJsonDocument input = QJsonDocument::fromJson(inFile.toUtf8());
-    list = input.object();
+    header = input.object();
 
-    QJsonObject cryoTEM2D = QJsonValue(list.value("Cryo-TEM 2D")).toObject();
+    QJsonObject sessionData = QJsonValue(header.value("Session Data")).toObject();
+    QJsonObject cryoTEM2D = QJsonValue(sessionData.value("Cryo-TEM 2D")).toObject();
 
     QString doseVal = QJsonValue(cryoTEM2D.value("Dose")).toString();
     ui->Dose_CryoTEM2D_2->setText(doseVal);
@@ -175,9 +179,10 @@ void Gopher::ImportCryoTEMVitrobotSettings()
     file.close();
 
     QJsonDocument input = QJsonDocument::fromJson(inFile.toUtf8());
-    list = input.object();
+    header = input.object();
 
-    QJsonObject vit = QJsonValue(list.value("Vitrobot Settings")).toObject();
+    QJsonObject sessionData = QJsonValue(header.value("Session Data")).toObject();
+    QJsonObject vit = QJsonValue(sessionData.value("Vitrobot Settings")).toObject();
 
     QString forceVal = QJsonValue(vit.value("Blot Force")).toString();
     ui->BlotForceText_VitrobotSettings_2->setText(forceVal);
@@ -209,9 +214,10 @@ void Gopher::ImportCryoTEMTomo()
     file.close();
 
     QJsonDocument input = QJsonDocument::fromJson(inFile.toUtf8());
-    list = input.object();
+    header = input.object();
 
-    QJsonObject cryoTEMTomo = QJsonValue(list.value("Cryo-TEM Tomo")).toObject();
+    QJsonObject sessionData = QJsonValue(header.value("Session Data")).toObject();
+    QJsonObject cryoTEMTomo = QJsonValue(sessionData.value("Cryo-TEM Tomo")).toObject();
 
     QString mstVal = QJsonValue(cryoTEMTomo.value("Max Specimen Thickness")).toString();
     ui->MaxSpecimenThickness_Text_CryoTomo_2->setText(mstVal);
@@ -249,9 +255,10 @@ void Gopher::ImportCryoTEMTomoVitrobotSettings()
     file.close();
 
     QJsonDocument input = QJsonDocument::fromJson(inFile.toUtf8());
-    list = input.object();
+    header = input.object();
 
-    QJsonObject vit = QJsonValue(list.value("Vitrobot Settings")).toObject();
+    QJsonObject sessionData = QJsonValue(header.value("Session Data")).toObject();
+    QJsonObject vit = QJsonValue(sessionData.value("Vitrobot Settings")).toObject();
 
     QString forceVal = QJsonValue(vit.value("Blot Force")).toString();
     ui->BlotForceText_VitrobotSettings_3->setText(forceVal);
@@ -283,9 +290,10 @@ void Gopher::ImportStem2D()
     file.close();
 
     QJsonDocument input = QJsonDocument::fromJson(inFile.toUtf8());
-    list = input.object();
+    header = input.object();
 
-    QJsonObject stem2D = QJsonValue(list.value("Stem 2D")).toObject();
+    QJsonObject sessionData = QJsonValue(header.value("Session Data")).toObject();
+    QJsonObject stem2D = QJsonValue(sessionData.value("Stem 2D")).toObject();
 
     QString spotVal = QJsonValue(stem2D.value("Spot Size")).toString();
     ui->SpotSizeText_STEM2D_2->setText(spotVal);
@@ -326,9 +334,10 @@ void Gopher::ImportStemTomo()
     file.close();
 
     QJsonDocument input = QJsonDocument::fromJson(inFile.toUtf8());
-    list = input.object();
+    header = input.object();
 
-    QJsonObject stemTomo = QJsonValue(list.value("Stem Tomo")).toObject();
+    QJsonObject sessionData = QJsonValue(header.value("Session Data")).toObject();
+    QJsonObject stemTomo = QJsonValue(sessionData.value("Stem Tomo")).toObject();
 
     QString mstVal = QJsonValue(stemTomo.value("Max Section Thickness")).toString();
     ui->MaxSectionThickness_Text_STEMTomo_2->setText(mstVal);
@@ -375,9 +384,10 @@ void Gopher::ImportSEM()
     file.close();
 
     QJsonDocument input = QJsonDocument::fromJson(inFile.toUtf8());
-    list = input.object();
+    header = input.object();
 
-    QJsonObject sem2D = QJsonValue(list.value("SEM 2D")).toObject();
+    QJsonObject sessionData = QJsonValue(header.value("Session Data")).toObject();
+    QJsonObject sem2D = QJsonValue(sessionData.value("SEM 2D")).toObject();
 
     QString coatVal = QJsonValue(sem2D.value("Coating")).toString();
     ui->Coating_DropBox_SEM_2->setCurrentText(coatVal);
@@ -398,9 +408,10 @@ void Gopher::ImportCryoSEM()
     file.close();
 
     QJsonDocument input = QJsonDocument::fromJson(inFile.toUtf8());
-    list = input.object();
+    header = input.object();
 
-    QJsonObject cryoSEM = QJsonValue(list.value("Cryo-SEM")).toObject();
+    QJsonObject sessionData = QJsonValue(header.value("Session Data")).toObject();
+    QJsonObject cryoSEM = QJsonValue(sessionData.value("Cryo-SEM")).toObject();
 
     QString priCoatVal = QJsonValue(cryoSEM.value("Primary Coating")).toString();
     ui->PrimaryCoating_DropBox_CryoSEM_2->setCurrentText(priCoatVal);
@@ -453,9 +464,10 @@ void Gopher::ImportCryoSEMVitrobotSettings()
     file.close();
 
     QJsonDocument input = QJsonDocument::fromJson(inFile.toUtf8());
-    list = input.object();
+    header = input.object();
 
-    QJsonObject vit = QJsonValue(list.value("Vitrobot Settings")).toObject();
+    QJsonObject sessionData = QJsonValue(header.value("Session Data")).toObject();
+    QJsonObject vit = QJsonValue(sessionData.value("Vitrobot Settings")).toObject();
 
     QString forceVal = QJsonValue(vit.value("Blot Force")).toString();
     ui->BlotForceText_VitrobotSettings_4->setText(forceVal);
@@ -487,8 +499,9 @@ void Gopher::ImportConfocal()
     file.close();
 
     QJsonDocument input = QJsonDocument::fromJson(inFile.toUtf8());
-    list = input.object();
+    header = input.object();
 
-    QJsonObject confocal = QJsonValue(list.value("Confocal")).toObject();
+    QJsonObject sessionData = QJsonValue(header.value("Session Data")).toObject();
+    QJsonObject confocal = QJsonValue(sessionData.value("Confocal")).toObject();
 }
 

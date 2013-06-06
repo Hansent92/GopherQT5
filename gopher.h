@@ -49,7 +49,8 @@ private:
     Ui::Gopher* ui;
 
     QJsonObject* sessionObject;
-    QJsonObject list;
+    QJsonObject list;\
+    QJsonObject header;
 
     QJsonDocument* file;
 

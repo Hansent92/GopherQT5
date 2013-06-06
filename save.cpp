@@ -21,8 +21,6 @@
 
 void Gopher::SaveTEM2D()
 {
-    QJsonObject list;
-
     QJsonObject sessionObject;//Intro
     sessionObject.insert("Data Taken By", ui->DataTakenBy->currentText());
     //    sessionData.insert("Date", ui->dateTimeEdit);
@@ -37,7 +35,7 @@ void Gopher::SaveTEM2D()
     sessionObject.insert("Camera", ui->Camera->currentText());
     sessionObject.insert("Acquisition Software", ui->AquisitionSoftware->currentText());
 
-    list.insert("Info",sessionObject);
+    list.insert("Session",sessionObject);
 
     QJsonObject sessionObject3;//TEM 2D
     sessionObject3.insert("Camera", ui->Camera_TEM2D_2->currentText());
@@ -47,13 +45,13 @@ void Gopher::SaveTEM2D()
     sessionObject3.insert("Cs Value",ui->CsValue_Text_TEM2D_2->displayText());
 
     list.insert("TEM 2D",sessionObject3);
+    header.insert("Session Data", list);
 
-    QJsonDocument doc = QJsonDocument(list);
-    doc.setObject(list);
+    QJsonDocument doc = QJsonDocument(header);
+    doc.setObject(header);
 
     QFile file;
-    QString filename = QFileDialog::getSaveFileName(this, "Save file",(ui->SubsetID->displayText()),"Text Files (*.json)");
-    QFileDialog::DialogLabel::FileType;
+    QString filename = QFileDialog::getSaveFileName(this, "Save file",(ui->SubsetID->displayText()),"");
     file.setFileName(filename);
     if(file.open(QFile::ReadOnly | QIODevice::WriteOnly | QIODevice::Text | QIODevice::Truncate))
     {
@@ -68,8 +66,6 @@ void Gopher::SaveTEM2D()
 
 void Gopher::SaveTEMTomo()
 {
-    QJsonObject list;
-
     QJsonObject sessionObject;//Intro
     sessionObject.insert("Data Taken By", ui->DataTakenBy->currentText());
     //    sessionData.insert("Date", ui->dateTimeEdit);
@@ -84,7 +80,7 @@ void Gopher::SaveTEMTomo()
     sessionObject.insert("Camera", ui->Camera->currentText());
     sessionObject.insert("Acquisition Software", ui->AquisitionSoftware->currentText());
 
-    list.insert("Info",sessionObject);
+    list.insert("Session",sessionObject);
 
     QJsonObject sessionObject4;//TEM Tomo
     sessionObject4.insert("Actual Specimen Thickness",ui->MaxSpecimenThickness_Text_TEMTomo_2->displayText());
@@ -96,13 +92,13 @@ void Gopher::SaveTEMTomo()
     sessionObject4.insert("Cs Value",ui->CsValue_Text_TEMTomo_2->displayText());
 
     list.insert("TEM Tomo", sessionObject4);
+    header.insert("Session Data",list);
 
-    QJsonDocument doc = QJsonDocument(list);
-    doc.setObject(list);
+    QJsonDocument doc = QJsonDocument(header);
+    doc.setObject(header);
 
     QFile file;
-    QString filename = QFileDialog::getSaveFileName(this, "Save file",(ui->SubsetID->displayText()),"Text Files (*.json)");
-    QFileDialog::DialogLabel::FileType;
+    QString filename = QFileDialog::getSaveFileName(this, "Save file",(ui->SubsetID->displayText()),"");
     file.setFileName(filename);
     if(file.open(QFile::ReadOnly | QIODevice::WriteOnly | QIODevice::Text | QIODevice::Truncate))
     {
@@ -117,8 +113,6 @@ void Gopher::SaveTEMTomo()
 
 void Gopher::SaveCryoTEM2D()
 {
-    QJsonObject list;
-
     QJsonObject sessionObject;//Intro
     sessionObject.insert("Data Taken By", ui->DataTakenBy->currentText());
     //    sessionData.insert("Date", ui->dateTimeEdit);
@@ -133,7 +127,7 @@ void Gopher::SaveCryoTEM2D()
     sessionObject.insert("Camera", ui->Camera->currentText());
     sessionObject.insert("Acquisition Software", ui->AquisitionSoftware->currentText());
 
-    list.insert("Info",sessionObject);
+    list.insert("Session",sessionObject);
 
     QJsonObject sessionObject5;//Cryo-TEM 2D
     sessionObject5.insert("Dose",ui->Dose_Text_CryoTEM2D_2->displayText());
@@ -154,13 +148,13 @@ void Gopher::SaveCryoTEM2D()
     sessionObject2.insert("Actual Humidity",ui->ActualText_VitrobotSettings_2->displayText());
 
     list.insert("Vitrobot Settings", sessionObject2);
+    header.insert("Session Data", list);
 
-    QJsonDocument doc = QJsonDocument(list);
-    doc.setObject(list);
+    QJsonDocument doc = QJsonDocument(header);
+    doc.setObject(header);
 
     QFile file;
-    QString filename = QFileDialog::getSaveFileName(this, "Save file",(ui->SubsetID->displayText()),"Text Files (*.json)");
-    QFileDialog::DialogLabel::FileType;
+    QString filename = QFileDialog::getSaveFileName(this, "Save file",(ui->SubsetID->displayText()),"");
     file.setFileName(filename);
     if(file.open(QFile::ReadOnly | QIODevice::WriteOnly | QIODevice::Text | QIODevice::Truncate))
     {
@@ -175,8 +169,6 @@ void Gopher::SaveCryoTEM2D()
 
 void Gopher::SaveCryoTomo()
 {
-    QJsonObject list;
-
     QJsonObject sessionObject;//Intro
     sessionObject.insert("Data Taken By", ui->DataTakenBy->currentText());
     //    sessionData.insert("Date", ui->dateTimeEdit);
@@ -191,7 +183,7 @@ void Gopher::SaveCryoTomo()
     sessionObject.insert("Camera", ui->Camera->currentText());
     sessionObject.insert("Acquisition Software", ui->AquisitionSoftware->currentText());
 
-    list.insert("Info",sessionObject);
+    list.insert("Session",sessionObject);
 
     QJsonObject sessionObject11;//Cryo-TEM Tomo
     sessionObject11.insert("Max Specimen Thickness",ui->MaxSpecimenThickness_Text_CryoTomo_2->displayText());
@@ -214,13 +206,13 @@ void Gopher::SaveCryoTomo()
     sessionObject2.insert("Actual Humidity",ui->ActualText_VitrobotSettings_3->displayText());
 
     list.insert("Vitrobot Settings", sessionObject2);
+    header.insert("Session Data",list);
 
-    QJsonDocument doc = QJsonDocument(list);
-    doc.setObject(list);
+    QJsonDocument doc = QJsonDocument(header);
+    doc.setObject(header);
 
     QFile file;
-    QString filename = QFileDialog::getSaveFileName(this, "Save file",(ui->SubsetID->displayText()),"Text Files (*.json)");
-    QFileDialog::DialogLabel::FileType;
+    QString filename = QFileDialog::getSaveFileName(this, "Save file",(ui->SubsetID->displayText()),"");
     file.setFileName(filename);
     if(file.open(QFile::ReadOnly | QIODevice::WriteOnly | QIODevice::Text | QIODevice::Truncate))
     {
@@ -235,8 +227,6 @@ void Gopher::SaveCryoTomo()
 
 void Gopher::SaveStem2D()
 {
-    QJsonObject list;
-
     QJsonObject sessionObject;//Intro
     sessionObject.insert("Data Taken By", ui->DataTakenBy->currentText());
     //    sessionData.insert("Date", ui->dateTimeEdit);
@@ -251,7 +241,7 @@ void Gopher::SaveStem2D()
     sessionObject.insert("Camera", ui->Camera->currentText());
     sessionObject.insert("Acquisition Software", ui->AquisitionSoftware->currentText());
 
-    list.insert("Info",sessionObject);
+    list.insert("Session",sessionObject);
 
     QJsonObject sessionObject6;//Stem 2D
     sessionObject6.insert("Spot Size",ui->SpotSizeText_STEM2D_2->displayText());
@@ -265,14 +255,13 @@ void Gopher::SaveStem2D()
     sessionObject6.insert("Nominal Magnification",ui->NominalMagnification_Text_STEM2D_2->displayText());
 
     list.insert("Stem 2D", sessionObject6);
+    header.insert("Session Data",list);
 
-    QJsonDocument doc = QJsonDocument(list);
-    doc.setObject(list);
+    QJsonDocument doc = QJsonDocument(header);
+    doc.setObject(header);
 
-    //("c:/Users/hansentd/Desktop/Gopher4/Tests/myFile2.json")
     QFile file;
-    QString filename = QFileDialog::getSaveFileName(this, "Save file",(ui->SubsetID->displayText()),"Text Files (*.json)");
-    QFileDialog::DialogLabel::FileType;
+    QString filename = QFileDialog::getSaveFileName(this, "Save file",(ui->SubsetID->displayText()),"");
     file.setFileName(filename);
     if(file.open(QFile::ReadOnly | QIODevice::WriteOnly | QIODevice::Text | QIODevice::Truncate))
     {
@@ -287,8 +276,6 @@ void Gopher::SaveStem2D()
 
 void Gopher::SaveStemTomo()
 {
-    QJsonObject list;
-
     QJsonObject sessionObject;//Intro
     sessionObject.insert("Data Taken By", ui->DataTakenBy->currentText());
     //    sessionData.insert("Date", ui->dateTimeEdit);
@@ -303,7 +290,7 @@ void Gopher::SaveStemTomo()
     sessionObject.insert("Camera", ui->Camera->currentText());
     sessionObject.insert("Acquisition Software", ui->AquisitionSoftware->currentText());
 
-    list.insert("Info",sessionObject);
+    list.insert("Session",sessionObject);
 
     QJsonObject sessionObject7;//Stem Tomo
     sessionObject7.insert("Max Section Thickness",ui->MaxSectionThickness_Text_STEMTomo_2->displayText());
@@ -319,13 +306,13 @@ void Gopher::SaveStemTomo()
     sessionObject7.insert("Acquisition Software",ui->AcquisitionSoftware_STEMTomo_2->currentText());
 
     list.insert("Stem Tomo", sessionObject7);
+    header.insert("Session Data",list);
 
-    QJsonDocument doc = QJsonDocument(list);
-    doc.setObject(list);
+    QJsonDocument doc = QJsonDocument(header);
+    doc.setObject(header);
 
     QFile file;
-    QString filename = QFileDialog::getSaveFileName(this, "Save file",(ui->SubsetID->displayText()),"Text Files (*.json)");
-    QFileDialog::DialogLabel::FileType;
+    QString filename = QFileDialog::getSaveFileName(this, "Save file",(ui->SubsetID->displayText()),"");
     file.setFileName(filename);
     if(file.open(QFile::ReadOnly | QIODevice::WriteOnly | QIODevice::Text | QIODevice::Truncate))
     {
@@ -340,8 +327,6 @@ void Gopher::SaveStemTomo()
 
 void Gopher::SaveSEM2D()
 {
-    QJsonObject list;
-
     QJsonObject sessionObject;//Intro
     sessionObject.insert("Data Taken By", ui->DataTakenBy->currentText());
     //    sessionData.insert("Date", ui->dateTimeEdit);
@@ -356,21 +341,20 @@ void Gopher::SaveSEM2D()
     sessionObject.insert("Camera", ui->Camera->currentText());
     sessionObject.insert("Acquisition Software", ui->AquisitionSoftware->currentText());
 
-    list.insert("Info",sessionObject);
+    list.insert("Session",sessionObject);
 
     QJsonObject sessionObject8;//SEM 2D
     sessionObject8.insert("Coating",ui->Coating_DropBox_SEM_2->currentText());
     sessionObject8.insert("Coating Thickness",ui->CoatingThickness_Text_SEM_2->displayText());
 
     list.insert("SEM 2D", sessionObject8);
+    header.insert("Session Data",list);
 
-    QJsonDocument doc = QJsonDocument(list);
-    doc.setObject(list);
+    QJsonDocument doc = QJsonDocument(header);
+    doc.setObject(header);
 
-    //("c:/Users/hansentd/Desktop/Gopher4/Tests/myFile2.json")
     QFile file;
-    QString filename = QFileDialog::getSaveFileName(this, "Save file",(ui->SubsetID->displayText()),"Text Files (*.json)");
-    QFileDialog::DialogLabel::FileType;
+    QString filename = QFileDialog::getSaveFileName(this, "Save file",(ui->SubsetID->displayText()),"");
     file.setFileName(filename);
     if(file.open(QFile::ReadOnly | QIODevice::WriteOnly | QIODevice::Text | QIODevice::Truncate))
     {
@@ -385,8 +369,6 @@ void Gopher::SaveSEM2D()
 
 void Gopher::SaveCryoSEM()
 {
-    QJsonObject list;
-
     QJsonObject sessionObject;//Intro
     sessionObject.insert("Data Taken By", ui->DataTakenBy->currentText());
     //    sessionData.insert("Date", ui->dateTimeEdit);
@@ -401,7 +383,7 @@ void Gopher::SaveCryoSEM()
     sessionObject.insert("Camera", ui->Camera->currentText());
     sessionObject.insert("Acquisition Software", ui->AquisitionSoftware->currentText());
 
-    list.insert("Info",sessionObject);
+    list.insert("Session",sessionObject);
 
     QJsonObject sessionObject9;//Cryo-SEM
     sessionObject9.insert("Primary Coating",ui->PrimaryCoating_DropBox_CryoSEM_2->currentText());
@@ -429,14 +411,13 @@ void Gopher::SaveCryoSEM()
     sessionObject2.insert("Actual Humidity",ui->ActualText_VitrobotSettings_4->displayText());
 
     list.insert("Vitrobot Settings", sessionObject2);
+    header.insert("Session Data",list);
 
-    QJsonDocument doc = QJsonDocument(list);
-    doc.setObject(list);
+    QJsonDocument doc = QJsonDocument(header);
+    doc.setObject(header);
 
-    //("c:/Users/hansentd/Desktop/Gopher4/Tests/myFile2.json")
     QFile file;
-    QString filename = QFileDialog::getSaveFileName(this, "Save file",(ui->SubsetID->displayText()),"Text Files (*.json)");
-    QFileDialog::DialogLabel::FileType;
+    QString filename = QFileDialog::getSaveFileName(this, "Save file",(ui->SubsetID->displayText()),"");
     file.setFileName(filename);
     if(file.open(QFile::ReadOnly | QIODevice::WriteOnly | QIODevice::Text | QIODevice::Truncate))
     {
@@ -451,8 +432,6 @@ void Gopher::SaveCryoSEM()
 
 void Gopher::SaveConfocal()
 {
-    QJsonObject list;
-
     QJsonObject sessionObject;//Intro
     sessionObject.insert("Data Taken By", ui->DataTakenBy->currentText());
     //    sessionData.insert("Date", ui->dateTimeEdit);
@@ -467,17 +446,17 @@ void Gopher::SaveConfocal()
     sessionObject.insert("Camera", ui->Camera->currentText());
     sessionObject.insert("Acquisition Software", ui->AquisitionSoftware->currentText());
 
-    list.insert("Info",sessionObject);
+    list.insert("Session",sessionObject);
 
     QJsonObject sessionObject10;//Confocal
     list.insert("Confocal", sessionObject10);
+    header.insert("Session Data",list);
 
-    QJsonDocument doc = QJsonDocument(list);
-    doc.setObject(list);
+    QJsonDocument doc = QJsonDocument(header);
+    doc.setObject(header);
 
     QFile file;
-    QString filename = QFileDialog::getSaveFileName(this, "Save file",(ui->SubsetID->displayText()),"Text Files (*.json)");
-    QFileDialog::DialogLabel::FileType;
+    QString filename = QFileDialog::getSaveFileName(this, "Save file",(ui->SubsetID->displayText()),"");
     file.setFileName(filename);
     if(file.open(QFile::ReadOnly | QIODevice::WriteOnly | QIODevice::Text | QIODevice::Truncate))
     {
