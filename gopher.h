@@ -21,6 +21,8 @@ class Gopher : public QMainWindow
 public:
     explicit Gopher(QWidget *parent = 0);
     ~Gopher();
+
+    Ui::Gopher* ui;
     
 private slots:
     void on_Cancel_clicked();
@@ -46,7 +48,7 @@ private slots:
     void on_actionSave_triggered();
 
 private:
-    Ui::Gopher* ui;
+
 
     QJsonObject* sessionObject;
     QJsonObject list;\

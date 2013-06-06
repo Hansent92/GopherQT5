@@ -17,9 +17,13 @@ SOURCES += main.cpp\
     instrument.cpp \
     imagemode.cpp \
     save.cpp \
-    import.cpp
+    import.cpp \
+    tem2d.cpp \
+    temtomo.cpp
 
-HEADERS  += gopher.h
+HEADERS  += gopher.h \
+    tem2d.h \
+    temtomo.h
 
 FORMS    += gopher.ui
 
